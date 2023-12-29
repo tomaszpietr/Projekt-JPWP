@@ -15,15 +15,16 @@ using System.Windows.Forms;
 
 namespace Gra
 {
-    public partial class Form2 : Form
+    public partial class Tryb1 : Form
     {
         int wynik;
         int a, b, c, d, ab, cd;
         String rownanie;
         bool start = false;
         int czas = 2000;
+        int punkty = 0;
         System.Windows.Forms.Timer timer = new System.Windows.Forms.Timer();
-        public Form2() //okno gry z trybem 1
+        public Tryb1() //okno gry z trybem 1
         {
             InitializeComponent();
             this.Text = "Tabliczka mnożenia: Wyścig z czasem - tryb 1";
@@ -33,6 +34,7 @@ namespace Gra
             label8.Parent = this;
             panel2.Hide();
             PobierzRekord();
+            label7.Text = "Zdobyte punkty: " + punkty;
         }
 
         private void Form2_Load(object sender, EventArgs e)
@@ -46,7 +48,8 @@ namespace Gra
             {
                 if (start == true && a * b == ab && c * d == cd)
                 {
-
+                    punkty += 1;
+                    label7.Text = "Zdobyte punkty: " + punkty;
                 }
                 if (start == false)
                 {
@@ -66,7 +69,7 @@ namespace Gra
         void WyswRown()
         {
             timer.Interval = czas;
-            timer.Tick += new EventHandler(timer_Tick);
+            timer.Tick += new EventHandler(timer_Rown);
             timer.Start();
         }
         void WyswRozw()
@@ -75,7 +78,7 @@ namespace Gra
             timer.Tick += new EventHandler(timer_Tick1);
             timer.Start();
         }
-        private void timer_Tick(object sender, EventArgs e)
+        private void timer_Rown(object sender, EventArgs e)
         {
             LosujRown();
         }
@@ -128,7 +131,7 @@ namespace Gra
 
         private void button5_Click(object sender, EventArgs e) //restart
         {
-            Form2 tryb1 = new Form2();
+            Tryb1 tryb1 = new Tryb1();
             tryb1.StartPosition = FormStartPosition.Manual;
             tryb1.Location = new Point(this.Location.X, this.Location.Y);
             tryb1.Show();
@@ -145,9 +148,14 @@ namespace Gra
 
         }
 
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
+
         private void button3_Click(object sender, EventArgs e) //powrót do home
         {
-            Form1 home = new Form1();
+            Menu home = new Menu();
             home.StartPosition = FormStartPosition.Manual;
             home.Location = new Point(this.Location.X, this.Location.Y);
             home.Show();
@@ -177,13 +185,11 @@ namespace Gra
         {
 
         }
-        void PobierzRekord()
+        public void PobierzRekord()
         {
             int rekord;
             string sciezka = "rekord1.txt";
-            // Odczytaj zawartość pliku
             string zawartoscPliku = File.ReadAllText(sciezka);
-            // Konwertuj ciąg znaków na liczbę całkowitą
             int.TryParse(zawartoscPliku, out rekord);
             label6.Text = "Twój rekord: " + rekord;
         }

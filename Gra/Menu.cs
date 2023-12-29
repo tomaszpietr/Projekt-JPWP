@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace Gra
 {
-    public partial class Form1 : Form
+    public partial class Menu : Form
     {
-        public Form1() //ekran startowy
+        public Menu() //ekran startowy
         {
             InitializeComponent();
             this.Size = new System.Drawing.Size(1024, 720);
@@ -51,12 +51,16 @@ namespace Gra
 
         private void button4_Click(object sender, EventArgs e)
         {
-
+            Tryb2 tryb2 = new Tryb2();
+            tryb2.StartPosition = FormStartPosition.Manual;
+            tryb2.Location = new Point(this.Location.X, this.Location.Y);
+            tryb2.Show();
+            this.Hide();
         }
 
         private void button3_Click(object sender, EventArgs e) //przycisk tryb1
         {
-            Form2 tryb1 = new Form2();
+            Tryb1 tryb1 = new Tryb1();
             tryb1.StartPosition = FormStartPosition.Manual;
             tryb1.Location = new Point(this.Location.X, this.Location.Y);
             tryb1.Show();
@@ -65,7 +69,7 @@ namespace Gra
 
         private void button5_Click(object sender, EventArgs e) //przycisk opis gry
         {
-            Form3 opis = new Form3();
+            Opis opis = new Opis();
             opis.StartPosition = FormStartPosition.Manual;
             opis.Location = new Point(this.Location.X, this.Location.Y);
             opis.Show();
@@ -83,19 +87,11 @@ namespace Gra
 
         private void button6_Click_1(object sender, EventArgs e)
         {
-            string sciezka = "rekord1.txt";
-
-            // Usuń zawartość pliku (nadpisz go)
-            File.WriteAllText(sciezka, string.Empty);
-
-            // Liczba całkowita do wyeksportowania
-            int liczba = 0;
-
-            // Eksportuj liczbę całkowitą do pliku
-            using (StreamWriter writer = new StreamWriter(sciezka))
-            {
-                writer.Write(liczba);
-            }
+            int punkty = 0;
+            File.WriteAllText("rekord1.txt", null);
+            File.WriteAllText("rekord1.txt", punkty.ToString());
+            File.WriteAllText("rekord2.txt", null);
+            File.WriteAllText("rekord2.txt", punkty.ToString());
             MessageBox.Show("Pomyślnie zresetowano rekordy", "Reset rekordów", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }

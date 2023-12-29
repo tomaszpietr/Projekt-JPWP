@@ -1,6 +1,6 @@
 ﻿namespace Gra
 {
-    partial class Form3
+    partial class Opis
     {
         /// <summary>
         /// Required designer variable.
@@ -65,13 +65,13 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // Form3
+            // Opis
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1008, 681);
             this.Controls.Add(this.panel1);
-            this.Name = "Form3";
+            this.Name = "Opis";
             this.Text = "Form3";
             this.Load += new System.EventHandler(this.Form3_Load);
             this.panel1.ResumeLayout(false);

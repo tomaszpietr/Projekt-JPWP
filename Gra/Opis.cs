@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Gra
 {
-    public partial class Form3 : Form
+    public partial class Opis : Form
     {
-        public Form3() //opis gry
+        public Opis() //opis gry
         {
 
             InitializeComponent();
@@ -35,6 +35,11 @@ namespace Gra
         private void button2_Click(object sender, EventArgs e)
         {
             this.Hide();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

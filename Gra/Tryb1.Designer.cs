@@ -1,6 +1,6 @@
 ﻿namespace Gra
 {
-    partial class Form2
+    partial class Tryb1
     {
         /// <summary>
         /// Required designer variable.
@@ -177,6 +177,7 @@
             this.label7.TabIndex = 8;
             this.label7.Text = "Zdobyte punkty:";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // label8
             // 
@@ -202,18 +203,18 @@
             this.panel1.TabIndex = 10;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
-            // Form2
+            // Tryb1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1008, 681);
-            this.Controls.Add(this.label8);
             this.Controls.Add(this.panel2);
+            this.Controls.Add(this.label8);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.panel1);
-            this.Name = "Form2";
+            this.Name = "Tryb1";
             this.Text = "Form2";
             this.Load += new System.EventHandler(this.Form2_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form2_KeyDown);
