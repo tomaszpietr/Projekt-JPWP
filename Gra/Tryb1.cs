@@ -7,6 +7,7 @@ using System.Drawing;
 using System.Drawing.Text;
 using System.IO;
 using System.Linq;
+using System.Reflection.Emit;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
@@ -17,74 +18,25 @@ namespace Gra
 {
     public partial class Tryb1 : Form
     {
+        int szanse_id = 3;
+        int pozycja;
+        int poz_licznik = 1;
         int wynik;
         int a, b, c, d, ab, cd;
         String rownanie;
         bool start = false;
-        int czas = 2000;
         int punkty = 0;
-        System.Windows.Forms.Timer timer = new System.Windows.Forms.Timer();
         public Tryb1() //okno gry z trybem 1
         {
             InitializeComponent();
             this.Text = "Tabliczka mnożenia: Wyścig z czasem - tryb 1";
             this.FormBorderStyle = FormBorderStyle.FixedSingle;
-            panel2.Parent = this;
-            panel1.Parent = this;
-            label8.Parent = this;
-            panel2.Hide();
+            menu_panel.Parent = this;
+            game_panel.Parent = this;
+            info.Parent = this;
+            menu_panel.Hide();
             PobierzRekord();
-            label7.Text = "Zdobyte punkty: " + punkty;
-        }
-
-        private void Form2_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Form2_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Space)
-            {
-                if (start == true && a * b == ab && c * d == cd)
-                {
-                    punkty += 1;
-                    label7.Text = "Zdobyte punkty: " + punkty;
-                }
-                if (start == false)
-                {
-                    label8.Hide();
-                    LosujRown();
-                    WyswRown();
-                    LosujRozw();
-                    WyswRozw();
-                    start = true;
-                }
-            }
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-        }
-        void WyswRown()
-        {
-            timer.Interval = czas;
-            timer.Tick += new EventHandler(timer_Rown);
-            timer.Start();
-        }
-        void WyswRozw()
-        {
-            timer.Interval = czas;
-            timer.Tick += new EventHandler(timer_Tick1);
-            timer.Start();
-        }
-        private void timer_Rown(object sender, EventArgs e)
-        {
-            LosujRown();
-        }
-        private void timer_Tick1(object sender, EventArgs e)
-        {
-            LosujRozw();
+            punkty_info.Text = "Zdobyte punkty: " + punkty;
         }
 
         void LosujRown()
@@ -101,35 +53,106 @@ namespace Gra
                 c = rnd.Next(1, 10);
                 d = rnd.Next(1, 10);
             }
-            label1.Text = a + " x " + b;
-            label3.Text = c + " x " + d;
-
+            rown1.Text = a + " x " + b;
+            rown2.Text = c + " x " + d;
         }
 
-        void LosujRozw()
+        void LosujRozw() //losuje liczby w miejscach rozwiązań
+        {
+            Random rnd = new Random();
+            ab = rnd.Next(1, 100);
+            cd = rnd.Next(1, 100);
+            rozw1.Text = "" + ab + "";
+            rozw2.Text = "" + cd + "";
+        }
+
+        void WyswRozw() //wyświetla prawidłowe rozwiązania
         {
             ab = a * b;
             cd = c * d;
-            label2.Text = " " + ab + " ";
-            label4.Text = " " + cd + " ";
+            rozw1.Text = "" + ab + "";
+            rozw2.Text = "" + cd + "";
         }
 
-        private void panel2_Paint(object sender, PaintEventArgs e)
+        private void timer1_Tick(object sender, EventArgs e)
         {
-
+            if (pozycja == poz_licznik)
+            {
+                WyswRozw();
+                Random rnd = new Random();
+                pozycja = rnd.Next(2, 10);
+                poz_licznik = 1;
+            }
+            else
+            {
+                LosujRozw();
+                poz_licznik++;
+            }
         }
 
-        private void button2_Click(object sender, EventArgs e) //kontynuuj
+        private void Tryb1_KeyDown(object sender, KeyEventArgs e)
         {
-            panel2.Hide();
+            {
+                if (e.KeyCode == Keys.Space)
+                {
+                    if (!start)
+                    {
+                        info.Hide();
+                        LosujRown();
+                        LosujRozw();
+                        start = true;
+                        Random rnd = new Random();
+                        pozycja = rnd.Next(2, 10);
+                        timer1.Enabled = true;
+                    }
+                    else if (start && timer1.Enabled)
+                    {
+                        if (a * b == ab && c * d == cd)
+                        {
+                            punkty++;
+                            punkty_info.Text = "Zdobyte punkty: " + punkty;
+                            LosujRown();
+                            LosujRozw();
+                        }
+                        else
+                        {
+
+                            if (szanse_id == 3)
+                            {
+                                szanse_id = 2;
+                                szanse.Image = Gra.Properties.Resources.szanse2;
+                                LosujRown();
+                                LosujRozw();
+                            }
+                            else if (szanse_id == 2)
+                            {
+                                szanse_id = 1;
+                                szanse.Image = Gra.Properties.Resources.szanse1;
+                                LosujRown();
+                                LosujRozw();
+                            }
+                            else if (szanse_id == 1)
+                            {
+                                szanse.Image = Gra.Properties.Resources.szanse0;
+                                timer1.Stop();
+                                info.Text = "Koniec gry\nZdobyte punkty: " + punkty;
+                                info.Show();
+                                timer1.Enabled = false;
+                                ZapiszRekord();
+                            }
+                        }
+                    }
+                }
+            }
         }
 
-        private void label6_Click(object sender, EventArgs e)
+        private void kontynnuj_Click(object sender, EventArgs e)
         {
-
+            menu_panel.Hide();
+            timer1.Enabled = true;
         }
 
-        private void button5_Click(object sender, EventArgs e) //restart
+        private void restart_Click(object sender, EventArgs e)
         {
             Tryb1 tryb1 = new Tryb1();
             tryb1.StartPosition = FormStartPosition.Manual;
@@ -138,22 +161,26 @@ namespace Gra
             this.Hide();
         }
 
-        private void label8_Click(object sender, EventArgs e)
+        private void menu_Click(object sender, EventArgs e)
         {
-
+            if (menu_panel.Visible == false)
+            {
+                menu_panel.Show();
+                timer1.Stop();
+            }
+            else if (menu_panel.Visible == true)
+            {
+                menu_panel.Hide();
+                timer1.Start();
+            }
         }
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
+        private void exit_Click(object sender, EventArgs e)
         {
-
+            Application.Exit();
         }
 
-        private void label7_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button3_Click(object sender, EventArgs e) //powrót do home
+        private void powrot_Click(object sender, EventArgs e)
         {
             Menu home = new Menu();
             home.StartPosition = FormStartPosition.Manual;
@@ -161,37 +188,25 @@ namespace Gra
             home.Show();
             this.Hide();
         }
-
-        private void button4_Click(object sender, EventArgs e) //wyjście
-        {
-            Application.Exit();
-        }
-
-        private void label5_Click(object sender, EventArgs e) //menu
-        {
-            if (panel2.Visible == false)
-            {
-                panel2.Show();
-                timer.Stop();
-            }
-            else if (panel2.Visible == true)
-            {
-                panel2.Hide();
-                timer.Start();
-            }
-        }
-
-        private void label1_Click_1(object sender, EventArgs e)
-        {
-
-        }
-        public void PobierzRekord()
+        void PobierzRekord()
         {
             int rekord;
             string sciezka = "rekord1.txt";
             string zawartoscPliku = File.ReadAllText(sciezka);
             int.TryParse(zawartoscPliku, out rekord);
-            label6.Text = "Twój rekord: " + rekord;
+            rekord_info.Text = "Twój rekord: " + rekord;
+        }
+        void ZapiszRekord()
+        {
+            int rekord;
+            string sciezka = "rekord1.txt";
+            string zawartoscPliku = File.ReadAllText(sciezka);
+            int.TryParse(zawartoscPliku, out rekord);
+            if (punkty > rekord)
+            {
+                File.WriteAllText("rekord1.txt", null);
+                File.WriteAllText("rekord1.txt", punkty.ToString());
+            }
         }
     }
 }

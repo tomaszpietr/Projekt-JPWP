@@ -28,218 +28,233 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2.SuspendLayout();
-            this.panel1.SuspendLayout();
+            this.components = new System.ComponentModel.Container();
+            this.rown1 = new System.Windows.Forms.Label();
+            this.rozw1 = new System.Windows.Forms.Label();
+            this.rown2 = new System.Windows.Forms.Label();
+            this.rozw2 = new System.Windows.Forms.Label();
+            this.menu_panel = new System.Windows.Forms.Panel();
+            this.kontynuuj_button = new System.Windows.Forms.Button();
+            this.restart_button = new System.Windows.Forms.Button();
+            this.exit_button = new System.Windows.Forms.Button();
+            this.powrot_button = new System.Windows.Forms.Button();
+            this.menu_button = new System.Windows.Forms.Label();
+            this.rekord_info = new System.Windows.Forms.Label();
+            this.punkty_info = new System.Windows.Forms.Label();
+            this.info = new System.Windows.Forms.Label();
+            this.game_panel = new System.Windows.Forms.Panel();
+            this.szanse = new System.Windows.Forms.PictureBox();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.menu_panel.SuspendLayout();
+            this.game_panel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.szanse)).BeginInit();
             this.SuspendLayout();
             // 
-            // label1
+            // rown1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 96F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label1.Location = new System.Drawing.Point(53, 31);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(406, 147);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "label1";
-            this.label1.Click += new System.EventHandler(this.label1_Click_1);
+            this.rown1.Font = new System.Drawing.Font("Microsoft Sans Serif", 96F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.rown1.Location = new System.Drawing.Point(53, 31);
+            this.rown1.Name = "rown1";
+            this.rown1.Size = new System.Drawing.Size(406, 147);
+            this.rown1.TabIndex = 0;
+            this.rown1.Text = "label1";
+            this.rown1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label2
+            // rozw1
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 96F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label2.Location = new System.Drawing.Point(53, 239);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(406, 147);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "label2";
+            this.rozw1.Font = new System.Drawing.Font("Microsoft Sans Serif", 96F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.rozw1.Location = new System.Drawing.Point(53, 239);
+            this.rozw1.Name = "rozw1";
+            this.rozw1.Size = new System.Drawing.Size(406, 147);
+            this.rozw1.TabIndex = 1;
+            this.rozw1.Text = "label2";
+            this.rozw1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label3
+            // rown2
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 96F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label3.Location = new System.Drawing.Point(505, 31);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(406, 147);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "label3";
+            this.rown2.Font = new System.Drawing.Font("Microsoft Sans Serif", 96F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.rown2.Location = new System.Drawing.Point(494, 31);
+            this.rown2.Name = "rown2";
+            this.rown2.Size = new System.Drawing.Size(406, 147);
+            this.rown2.TabIndex = 2;
+            this.rown2.Text = "label3";
+            this.rown2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label4
+            // rozw2
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 96F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label4.Location = new System.Drawing.Point(505, 239);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(406, 147);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "label4";
+            this.rozw2.Font = new System.Drawing.Font("Microsoft Sans Serif", 96F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.rozw2.Location = new System.Drawing.Point(494, 239);
+            this.rozw2.Name = "rozw2";
+            this.rozw2.Size = new System.Drawing.Size(406, 147);
+            this.rozw2.TabIndex = 3;
+            this.rozw2.Text = "label4";
+            this.rozw2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // panel2
+            // menu_panel
             // 
-            this.panel2.Controls.Add(this.button5);
-            this.panel2.Controls.Add(this.button2);
-            this.panel2.Controls.Add(this.button4);
-            this.panel2.Controls.Add(this.button3);
-            this.panel2.Location = new System.Drawing.Point(290, 65);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(435, 604);
-            this.panel2.TabIndex = 5;
-            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+            this.menu_panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.menu_panel.Controls.Add(this.kontynuuj_button);
+            this.menu_panel.Controls.Add(this.restart_button);
+            this.menu_panel.Controls.Add(this.exit_button);
+            this.menu_panel.Controls.Add(this.powrot_button);
+            this.menu_panel.Location = new System.Drawing.Point(264, 28);
+            this.menu_panel.Name = "menu_panel";
+            this.menu_panel.Size = new System.Drawing.Size(448, 630);
+            this.menu_panel.TabIndex = 5;
             // 
-            // button5
+            // kontynuuj_button
             // 
-            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.button5.Location = new System.Drawing.Point(92, 134);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(266, 115);
-            this.button5.TabIndex = 5;
-            this.button5.Text = "Restart gry";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
+            this.kontynuuj_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.kontynuuj_button.Location = new System.Drawing.Point(95, 20);
+            this.kontynuuj_button.Name = "kontynuuj_button";
+            this.kontynuuj_button.Size = new System.Drawing.Size(263, 96);
+            this.kontynuuj_button.TabIndex = 4;
+            this.kontynuuj_button.Text = "Kontynuuj";
+            this.kontynuuj_button.UseVisualStyleBackColor = true;
+            this.kontynuuj_button.Click += new System.EventHandler(this.kontynnuj_Click);
             // 
-            // button2
+            // restart_button
             // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.button2.Location = new System.Drawing.Point(92, 20);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(266, 96);
-            this.button2.TabIndex = 4;
-            this.button2.Text = "Kontynuuj";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.restart_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.restart_button.Location = new System.Drawing.Point(92, 134);
+            this.restart_button.Name = "restart_button";
+            this.restart_button.Size = new System.Drawing.Size(266, 115);
+            this.restart_button.TabIndex = 5;
+            this.restart_button.Text = "Restart gry";
+            this.restart_button.UseVisualStyleBackColor = true;
+            this.restart_button.Click += new System.EventHandler(this.restart_Click);
             // 
-            // button4
+            // exit_button
             // 
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.button4.Location = new System.Drawing.Point(95, 442);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(263, 146);
-            this.button4.TabIndex = 3;
-            this.button4.Text = "Wyjście";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.exit_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.exit_button.Location = new System.Drawing.Point(95, 442);
+            this.exit_button.Name = "exit_button";
+            this.exit_button.Size = new System.Drawing.Size(263, 146);
+            this.exit_button.TabIndex = 3;
+            this.exit_button.Text = "Wyjście";
+            this.exit_button.UseVisualStyleBackColor = true;
+            this.exit_button.Click += new System.EventHandler(this.exit_Click);
             // 
-            // button3
+            // powrot_button
             // 
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.button3.Location = new System.Drawing.Point(92, 262);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(266, 162);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "Powrót do ekranu głównego";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.powrot_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.powrot_button.Location = new System.Drawing.Point(92, 262);
+            this.powrot_button.Name = "powrot_button";
+            this.powrot_button.Size = new System.Drawing.Size(266, 162);
+            this.powrot_button.TabIndex = 2;
+            this.powrot_button.Text = "Powrót do ekranu głównego";
+            this.powrot_button.UseVisualStyleBackColor = true;
+            this.powrot_button.Click += new System.EventHandler(this.powrot_Click);
             // 
-            // label5
+            // menu_button
             // 
-            this.label5.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label5.Location = new System.Drawing.Point(862, 12);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(125, 50);
-            this.label5.TabIndex = 6;
-            this.label5.Text = "MENU";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label5.Click += new System.EventHandler(this.label5_Click);
+            this.menu_button.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.menu_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.menu_button.Location = new System.Drawing.Point(806, 12);
+            this.menu_button.Name = "menu_button";
+            this.menu_button.Size = new System.Drawing.Size(190, 50);
+            this.menu_button.TabIndex = 6;
+            this.menu_button.Text = "MENU";
+            this.menu_button.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.menu_button.Click += new System.EventHandler(this.menu_Click);
             // 
-            // label6
+            // rekord_info
             // 
-            this.label6.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label6.Location = new System.Drawing.Point(12, 12);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(169, 50);
-            this.label6.TabIndex = 7;
-            this.label6.Text = "Twój rekord:";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label6.Click += new System.EventHandler(this.label6_Click);
+            this.rekord_info.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.rekord_info.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.rekord_info.Location = new System.Drawing.Point(12, 12);
+            this.rekord_info.Name = "rekord_info";
+            this.rekord_info.Size = new System.Drawing.Size(216, 50);
+            this.rekord_info.TabIndex = 7;
+            this.rekord_info.Text = "Twój rekord:";
+            this.rekord_info.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label7
+            // punkty_info
             // 
-            this.label7.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label7.Location = new System.Drawing.Point(258, 12);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(535, 50);
-            this.label7.TabIndex = 8;
-            this.label7.Text = "Zdobyte punkty:";
-            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label7.Click += new System.EventHandler(this.label7_Click);
+            this.punkty_info.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.punkty_info.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.punkty_info.Location = new System.Drawing.Point(245, 12);
+            this.punkty_info.Name = "punkty_info";
+            this.punkty_info.Size = new System.Drawing.Size(546, 50);
+            this.punkty_info.TabIndex = 8;
+            this.punkty_info.Text = "Zdobyte punkty:";
+            this.punkty_info.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label8
+            // info
             // 
-            this.label8.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 72F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label8.Location = new System.Drawing.Point(32, 119);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(922, 475);
-            this.label8.TabIndex = 9;
-            this.label8.Text = "Naciśnij SPACJĘ, aby rozpocząć";
-            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label8.Click += new System.EventHandler(this.label8_Click);
+            this.info.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.info.Font = new System.Drawing.Font("Microsoft Sans Serif", 72F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.info.Location = new System.Drawing.Point(35, 127);
+            this.info.Name = "info";
+            this.info.Size = new System.Drawing.Size(943, 531);
+            this.info.TabIndex = 9;
+            this.info.Text = "Naciśnij SPACJĘ, aby rozpocząć";
+            this.info.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // panel1
+            // game_panel
             // 
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.label4);
-            this.panel1.Location = new System.Drawing.Point(32, 103);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(943, 407);
-            this.panel1.TabIndex = 10;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            this.game_panel.Controls.Add(this.rown1);
+            this.game_panel.Controls.Add(this.rown2);
+            this.game_panel.Controls.Add(this.rozw1);
+            this.game_panel.Controls.Add(this.rozw2);
+            this.game_panel.Location = new System.Drawing.Point(35, 142);
+            this.game_panel.Name = "game_panel";
+            this.game_panel.Size = new System.Drawing.Size(943, 438);
+            this.game_panel.TabIndex = 10;
+            // 
+            // szanse
+            // 
+            this.szanse.Image = global::Gra.Properties.Resources.szanse3;
+            this.szanse.Location = new System.Drawing.Point(60, 75);
+            this.szanse.Name = "szanse";
+            this.szanse.Size = new System.Drawing.Size(108, 35);
+            this.szanse.TabIndex = 11;
+            this.szanse.TabStop = false;
+            // 
+            // timer1
+            // 
+            this.timer1.Interval = 500;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // Tryb1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1008, 681);
-            this.Controls.Add(this.panel2);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.menu_panel);
+            this.Controls.Add(this.info);
+            this.Controls.Add(this.szanse);
+            this.Controls.Add(this.rekord_info);
+            this.Controls.Add(this.menu_button);
+            this.Controls.Add(this.punkty_info);
+            this.Controls.Add(this.game_panel);
             this.Name = "Tryb1";
-            this.Text = "Form2";
-            this.Load += new System.EventHandler(this.Form2_Load);
-            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form2_KeyDown);
-            this.panel2.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.Text = "Tryb1";
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Tryb1_KeyDown);
+            this.menu_panel.ResumeLayout(false);
+            this.game_panel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.szanse)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label rown1;
+        private System.Windows.Forms.Label rozw1;
+        private System.Windows.Forms.Label rown2;
+        private System.Windows.Forms.Label rozw2;
+        private System.Windows.Forms.Panel menu_panel;
+        private System.Windows.Forms.Button exit_button;
+        private System.Windows.Forms.Button powrot_button;
+        private System.Windows.Forms.Button restart_button;
+        private System.Windows.Forms.Button kontynuuj_button;
+        private System.Windows.Forms.Label menu_button;
+        private System.Windows.Forms.Label rekord_info;
+        private System.Windows.Forms.Label punkty_info;
+        private System.Windows.Forms.Label info;
+        private System.Windows.Forms.Panel game_panel;
+        private System.Windows.Forms.PictureBox szanse;
+        private System.Windows.Forms.Timer timer1;
     }
 }

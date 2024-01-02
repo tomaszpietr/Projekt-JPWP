@@ -12,34 +12,24 @@ namespace Gra
 {
     public partial class Opis : Form
     {
-        public Opis() //opis gry
+        public Opis()
         {
-
             InitializeComponent();
-            panel1.BackColor = Color.FromArgb(0, 0, 0, 0);
+            przyciski.BackColor = Color.FromArgb(0, 0, 0, 0);
             this.Text = "Opis gry";
             this.FormBorderStyle = FormBorderStyle.FixedSingle;
-        }
-
-        private void Form3_Load(object sender, EventArgs e)
-        {
             this.BackgroundImage = Properties.Resources.opis1;
             this.BackgroundImageLayout = ImageLayout.Stretch;
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void exit_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void powrot_Click(object sender, EventArgs e)
         {
             this.Hide();
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

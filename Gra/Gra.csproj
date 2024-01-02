@@ -115,6 +115,10 @@
   <ItemGroup>
     <Content Include="Properties\math_hero.png" />
     <Content Include="Properties\opis1.jpg" />
+    <None Include="Properties\szanse3.png" />
+    <None Include="Properties\szanse2.png" />
+    <None Include="Properties\szanse1.png" />
+    <None Include="Properties\szanse0.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

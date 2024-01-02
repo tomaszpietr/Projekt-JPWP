@@ -12,6 +12,7 @@ namespace Gra
         bool goup, godown;
         int punkty = 0;
         bool start = false;
+        int szanse_id = 3;
         public Tryb2()
         {
             InitializeComponent();
@@ -53,53 +54,22 @@ namespace Gra
             }
         }
 
-
-        private void label6_Click(object sender, EventArgs e)
+        private void timer1_Tick(object sender, EventArgs e) //timer potrzebny do ruchu postacią
         {
-
-        }
-
-        private void Tryb2_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void timer1_Tick(object sender, EventArgs e)
-        {
-            if (goup && hero.Location.Y >= 0)
+            if (goup && hero.Location.Y >= 110)
             {
-               hero.Top -= 15;
+               hero.Top -= 110;
             }
             if (godown && hero.Location.Y <= 422)
             {
-               hero.Top += 15;
+               hero.Top += 110;
             }
         }
 
-        private void timer2_Tick(object sender, EventArgs e)
+        private void timer2_Tick(object sender, EventArgs e) //timer potrzebny do przesuwania się liczb
         {
             panel2.Left -= 10;
             Zderzenie();
-        }
-
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label7_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
         }
 
         void PobierzRekord()
@@ -108,7 +78,7 @@ namespace Gra
             string sciezka = "rekord2.txt";
             string zawartoscPliku = File.ReadAllText(sciezka);
             int.TryParse(zawartoscPliku, out rekord);
-            label6.Text = "Twój rekord:\n" + rekord;
+            label6.Text = "Twój rekord: " + rekord;
         }
 
         private void menu_button_Click(object sender, EventArgs e)
@@ -166,15 +136,29 @@ namespace Gra
         void losujLiczby() //losowanie równania i liczb które będą się przesuwać oraz losowanie pozycji poprawnego rozwiązania
         {
             Random rnd = new Random();
-            a = rnd.Next(1, 10);
-            b = rnd.Next(1, 10);
+            a = rnd.Next(2, 10);
+            b = rnd.Next(2, 10);
             c = a * b;
             label7.Text = a + " x " + b;
-            liczba1.Text = "" + rnd.Next(1,100) + "";
-            liczba2.Text = "" + rnd.Next(1,100) + "";
-            liczba3.Text = "" + rnd.Next(1,100) + "";
-            liczba4.Text = "" + rnd.Next(1,100) + "";
-            liczba5.Text = "" + rnd.Next(1,100) + "";
+            int l1, l2, l3, l4, l5;
+            l1 = rnd.Next(1, 100);
+            l2 = rnd.Next(1, 100);
+            l3 = rnd.Next(1, 100);
+            l4 = rnd.Next(1, 100);
+            l5 = rnd.Next(1, 100);
+               while (l1 == l2 || l1 == l3 || l1 == l4 || l1 == l5 || l2 == l3 || l2 == l4 || l2 == l5 || l3 == l4 || l3 == l5 || l4 == l5)
+            {
+                l1 = rnd.Next(1, 100);
+                l2 = rnd.Next(1, 100);
+                l3 = rnd.Next(1, 100);
+                l4 = rnd.Next(1, 100);
+                l5 = rnd.Next(1, 100);
+            }
+            liczba1.Text = "" + l1 + "";
+            liczba2.Text = "" + l2 + "";
+            liczba3.Text = "" + l3 + "";
+            liczba4.Text = "" + l4 + "";
+            liczba5.Text = "" + l5 + "";
             pozycja = rnd.Next(1, 10);
             switch ((pozycja % 5) + 1)
             {
@@ -220,13 +204,32 @@ namespace Gra
                 }
                 else
                 {
-                    label8.Text = "Koniec gry\nZdobyte punkty: " + punkty;
-                    label8.Show();
-                    TimersOFF();
-                    ZapiszRekord();
+                    if (szanse_id == 3)
+                    {
+                        szanse_id = 2;
+                        szanse.Image = Gra.Properties.Resources.szanse2;
+                        losujLiczby();
+                        panel2.Location = new Point(859, 3);
+                    }
+                    else if (szanse_id == 2)
+                    {
+                        szanse_id = 1;
+                        szanse.Image = Gra.Properties.Resources.szanse1;
+                        losujLiczby();
+                        panel2.Location = new Point(859, 3);
+                    }
+                    else if (szanse_id == 1)
+                    {
+                        szanse.Image = Gra.Properties.Resources.szanse0;
+                        label8.Text = "Koniec gry\nZdobyte punkty: " + punkty;
+                        label8.Show();
+                        TimersOFF();
+                        ZapiszRekord();
+                    }
                 }
             }
         }
+
         void ZapiszRekord()
         {
             int rekord;
