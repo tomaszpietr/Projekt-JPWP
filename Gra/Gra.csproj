@@ -22,6 +22,8 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <DocumentationFile>
+    </DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -114,7 +116,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Properties\math_hero.png" />
+    <None Include="Properties\opis.jpg" />
     <Content Include="Properties\opis1.jpg" />
+    <None Include="Properties\tlo2.jpg" />
+    <None Include="Properties\tlo1.jpg" />
     <None Include="Properties\szanse3.png" />
     <None Include="Properties\szanse2.png" />
     <None Include="Properties\szanse1.png" />

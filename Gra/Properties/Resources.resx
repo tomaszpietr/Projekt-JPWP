@@ -121,6 +121,9 @@
   <data name="math_hero" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>math_hero.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="opis" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>opis.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="opis1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>opis1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -8050,5 +8053,11 @@
         0uBN2DSAZUomPyilSlZBB4VjnpSq9JMoBjE9ajILrryyZSlJgA9fen28jbrYMASoBCvmnKSRAc9JHXM0
         oQmBsJ3d6WTMKWVE8TTsZTSdA9ypO0j5rvLWqCVfQGnlsEAgjMUpTI2hXpEGkPab3P/Z
 </value>
+  </data>
+  <data name="tlo1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>tlo1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tlo2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>tlo2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

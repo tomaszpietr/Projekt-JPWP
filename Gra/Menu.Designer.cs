@@ -29,7 +29,9 @@
         private void InitializeComponent()
         {
             this.main_panel = new System.Windows.Forms.Panel();
+            this.autor = new System.Windows.Forms.Label();
             this.reset_button = new System.Windows.Forms.Button();
+            this.tytul = new System.Windows.Forms.Label();
             this.opis_button = new System.Windows.Forms.Button();
             this.start_button = new System.Windows.Forms.Button();
             this.exit_button = new System.Windows.Forms.Button();
@@ -42,20 +44,34 @@
             // 
             // main_panel
             // 
+            this.main_panel.Controls.Add(this.autor);
             this.main_panel.Controls.Add(this.reset_button);
+            this.main_panel.Controls.Add(this.tytul);
             this.main_panel.Controls.Add(this.opis_button);
             this.main_panel.Controls.Add(this.start_button);
             this.main_panel.Controls.Add(this.exit_button);
-            this.main_panel.Location = new System.Drawing.Point(55, 243);
+            this.main_panel.Location = new System.Drawing.Point(67, 20);
             this.main_panel.Name = "main_panel";
             this.main_panel.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.main_panel.Size = new System.Drawing.Size(900, 347);
+            this.main_panel.Size = new System.Drawing.Size(888, 649);
             this.main_panel.TabIndex = 0;
+            // 
+            // autor
+            // 
+            this.autor.BackColor = System.Drawing.Color.Blue;
+            this.autor.Font = new System.Drawing.Font("Arial Rounded MT Bold", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.autor.ForeColor = System.Drawing.Color.White;
+            this.autor.Location = new System.Drawing.Point(273, 590);
+            this.autor.Name = "autor";
+            this.autor.Size = new System.Drawing.Size(346, 46);
+            this.autor.TabIndex = 6;
+            this.autor.Text = "Autor: Tomasz Pietrowski";
+            this.autor.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // reset_button
             // 
             this.reset_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.reset_button.Location = new System.Drawing.Point(321, 178);
+            this.reset_button.Location = new System.Drawing.Point(590, 203);
             this.reset_button.Name = "reset_button";
             this.reset_button.Size = new System.Drawing.Size(263, 146);
             this.reset_button.TabIndex = 5;
@@ -63,10 +79,22 @@
             this.reset_button.UseVisualStyleBackColor = true;
             this.reset_button.Click += new System.EventHandler(this.reset_button_Click);
             // 
+            // tytul
+            // 
+            this.tytul.BackColor = System.Drawing.Color.Green;
+            this.tytul.Font = new System.Drawing.Font("Arial Rounded MT Bold", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tytul.ForeColor = System.Drawing.Color.White;
+            this.tytul.Location = new System.Drawing.Point(74, 52);
+            this.tytul.Name = "tytul";
+            this.tytul.Size = new System.Drawing.Size(740, 72);
+            this.tytul.TabIndex = 5;
+            this.tytul.Text = "Tabliczka mnożenia: Wyścig z czasem";
+            this.tytul.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // opis_button
             // 
             this.opis_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.opis_button.Location = new System.Drawing.Point(321, 3);
+            this.opis_button.Location = new System.Drawing.Point(306, 203);
             this.opis_button.Name = "opis_button";
             this.opis_button.Size = new System.Drawing.Size(263, 146);
             this.opis_button.TabIndex = 4;
@@ -77,7 +105,7 @@
             // start_button
             // 
             this.start_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.start_button.Location = new System.Drawing.Point(3, 3);
+            this.start_button.Location = new System.Drawing.Point(19, 203);
             this.start_button.Name = "start_button";
             this.start_button.Size = new System.Drawing.Size(267, 146);
             this.start_button.TabIndex = 1;
@@ -88,7 +116,7 @@
             // exit_button
             // 
             this.exit_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.exit_button.Location = new System.Drawing.Point(642, 3);
+            this.exit_button.Location = new System.Drawing.Point(307, 375);
             this.exit_button.Name = "exit_button";
             this.exit_button.Size = new System.Drawing.Size(263, 146);
             this.exit_button.TabIndex = 0;
@@ -126,6 +154,7 @@
             this.choose_mode_panel.Name = "choose_mode_panel";
             this.choose_mode_panel.Size = new System.Drawing.Size(268, 374);
             this.choose_mode_panel.TabIndex = 4;
+            this.choose_mode_panel.Visible = false;
             // 
             // Menu
             // 
@@ -152,6 +181,8 @@
         private System.Windows.Forms.Button tryb2_button;
         private System.Windows.Forms.Panel choose_mode_panel;
         private System.Windows.Forms.Button reset_button;
+        private System.Windows.Forms.Label tytul;
+        private System.Windows.Forms.Label autor;
     }
 }
 

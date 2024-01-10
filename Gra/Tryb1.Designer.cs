@@ -52,7 +52,9 @@
             // 
             // rown1
             // 
+            this.rown1.BackColor = System.Drawing.Color.Green;
             this.rown1.Font = new System.Drawing.Font("Microsoft Sans Serif", 96F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.rown1.ForeColor = System.Drawing.Color.White;
             this.rown1.Location = new System.Drawing.Point(53, 31);
             this.rown1.Name = "rown1";
             this.rown1.Size = new System.Drawing.Size(406, 147);
@@ -62,7 +64,9 @@
             // 
             // rozw1
             // 
+            this.rozw1.BackColor = System.Drawing.Color.Green;
             this.rozw1.Font = new System.Drawing.Font("Microsoft Sans Serif", 96F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.rozw1.ForeColor = System.Drawing.Color.White;
             this.rozw1.Location = new System.Drawing.Point(53, 239);
             this.rozw1.Name = "rozw1";
             this.rozw1.Size = new System.Drawing.Size(406, 147);
@@ -72,7 +76,9 @@
             // 
             // rown2
             // 
+            this.rown2.BackColor = System.Drawing.Color.Blue;
             this.rown2.Font = new System.Drawing.Font("Microsoft Sans Serif", 96F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.rown2.ForeColor = System.Drawing.Color.White;
             this.rown2.Location = new System.Drawing.Point(494, 31);
             this.rown2.Name = "rown2";
             this.rown2.Size = new System.Drawing.Size(406, 147);
@@ -82,7 +88,9 @@
             // 
             // rozw2
             // 
+            this.rozw2.BackColor = System.Drawing.Color.Blue;
             this.rozw2.Font = new System.Drawing.Font("Microsoft Sans Serif", 96F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.rozw2.ForeColor = System.Drawing.Color.White;
             this.rozw2.Location = new System.Drawing.Point(494, 239);
             this.rozw2.Name = "rozw2";
             this.rozw2.Size = new System.Drawing.Size(406, 147);
@@ -99,7 +107,7 @@
             this.menu_panel.Controls.Add(this.powrot_button);
             this.menu_panel.Location = new System.Drawing.Point(264, 28);
             this.menu_panel.Name = "menu_panel";
-            this.menu_panel.Size = new System.Drawing.Size(448, 630);
+            this.menu_panel.Size = new System.Drawing.Size(450, 630);
             this.menu_panel.TabIndex = 5;
             // 
             // kontynuuj_button
@@ -148,8 +156,9 @@
             // 
             // menu_button
             // 
-            this.menu_button.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.menu_button.BackColor = System.Drawing.Color.Teal;
             this.menu_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.menu_button.ForeColor = System.Drawing.Color.White;
             this.menu_button.Location = new System.Drawing.Point(806, 12);
             this.menu_button.Name = "menu_button";
             this.menu_button.Size = new System.Drawing.Size(190, 50);
@@ -160,8 +169,9 @@
             // 
             // rekord_info
             // 
-            this.rekord_info.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.rekord_info.BackColor = System.Drawing.Color.DodgerBlue;
             this.rekord_info.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.rekord_info.ForeColor = System.Drawing.Color.White;
             this.rekord_info.Location = new System.Drawing.Point(12, 12);
             this.rekord_info.Name = "rekord_info";
             this.rekord_info.Size = new System.Drawing.Size(216, 50);
@@ -171,8 +181,9 @@
             // 
             // punkty_info
             // 
-            this.punkty_info.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.punkty_info.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.punkty_info.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.punkty_info.ForeColor = System.Drawing.Color.White;
             this.punkty_info.Location = new System.Drawing.Point(245, 12);
             this.punkty_info.Name = "punkty_info";
             this.punkty_info.Size = new System.Drawing.Size(546, 50);
@@ -182,11 +193,12 @@
             // 
             // info
             // 
-            this.info.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.info.BackColor = System.Drawing.Color.Teal;
             this.info.Font = new System.Drawing.Font("Microsoft Sans Serif", 72F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.info.Location = new System.Drawing.Point(35, 127);
+            this.info.ForeColor = System.Drawing.Color.White;
+            this.info.Location = new System.Drawing.Point(49, 142);
             this.info.Name = "info";
-            this.info.Size = new System.Drawing.Size(943, 531);
+            this.info.Size = new System.Drawing.Size(913, 485);
             this.info.TabIndex = 9;
             this.info.Text = "Naciśnij SPACJĘ, aby rozpocząć";
             this.info.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -199,7 +211,7 @@
             this.game_panel.Controls.Add(this.rozw2);
             this.game_panel.Location = new System.Drawing.Point(35, 142);
             this.game_panel.Name = "game_panel";
-            this.game_panel.Size = new System.Drawing.Size(943, 438);
+            this.game_panel.Size = new System.Drawing.Size(939, 438);
             this.game_panel.TabIndex = 10;
             // 
             // szanse
@@ -213,7 +225,7 @@
             // 
             // timer1
             // 
-            this.timer1.Interval = 500;
+            this.timer1.Interval = 1500;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // Tryb1

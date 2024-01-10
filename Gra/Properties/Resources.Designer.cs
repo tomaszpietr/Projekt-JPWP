@@ -73,6 +73,16 @@ namespace Gra.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap opis {
+            get {
+                object obj = ResourceManager.GetObject("opis", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap opis1 {
             get {
                 object obj = ResourceManager.GetObject("opis1", resourceCulture);
@@ -126,6 +136,26 @@ namespace Gra.Properties {
         internal static System.Drawing.Bitmap tlo {
             get {
                 object obj = ResourceManager.GetObject("tlo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap tlo1 {
+            get {
+                object obj = ResourceManager.GetObject("tlo1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap tlo2 {
+            get {
+                object obj = ResourceManager.GetObject("tlo2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
